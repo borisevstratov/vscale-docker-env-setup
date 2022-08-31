@@ -17,8 +17,7 @@ echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 # Install GitHub CLI
 apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
 apt-add-repository https://cli.github.com/packages
-apt update
-apt install gh
+apt install gh -y
 
 # Install PostgreSQL
 apt install postgresql postgresql-contrib -y
