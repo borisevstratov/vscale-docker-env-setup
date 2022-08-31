@@ -1,5 +1,5 @@
 #! /bin/sh
-set -x
+set -e
 
 # Update dependencies
 apt update -y
