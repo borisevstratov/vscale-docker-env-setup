@@ -4,7 +4,7 @@ set -e
 # Create a sude-enabled user
 USER_PASSWD=$(openssl rand -base64 12)
 useradd developer
-echo "$USER_PASSWD" | passwd developer --stdin
+echo "developer:${USER_PASSWD}" | chpasswd
 usermod -aG sudo developer
 echo "*** Created user 'developer' with password '${USER_PASSWD}' ***"
 
