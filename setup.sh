@@ -1,6 +1,13 @@
 #! /bin/sh
 set -e
 
+# Create a sude-enabled user
+USER_PASSWD=$(openssl rand -base64 12)
+useradd developer
+echo "$USER_PASSWD" | passwd developer --stdin
+usermod -aG sudo developer
+echo "*** Created user 'developer' with password '${USER_PASSWD}' ***"
+
 # Update dependencies
 apt update -y
 echo "*** Updated dependencies ***"
