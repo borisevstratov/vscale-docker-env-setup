@@ -8,7 +8,7 @@ Bash script that installs PostgreSQL, GitHub CLI and creates 4Gb swap partition
 Run script with `wget`
 
 ```bash
-  wget https://raw.githubusercontent.com/borisevstratov/vscale-docker-env-setup/main/setup.sh && chmod +x bitrix-env.sh && ./bitrix-env.sh
+  wget https://raw.githubusercontent.com/borisevstratov/vscale-docker-env-setup/main/setup.sh && chmod +x setup.sh && ./setup.sh
 ```
 
 ## Post-installation
