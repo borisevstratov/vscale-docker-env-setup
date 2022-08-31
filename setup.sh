@@ -13,7 +13,7 @@ apt update -y
 echo "*** Updated dependencies ***"
 
 # Setup Swap
-fallocate -l $SWAP_SIZE /swapfile
+fallocate -l 4G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
