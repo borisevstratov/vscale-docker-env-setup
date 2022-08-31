@@ -32,3 +32,6 @@ echo "*** Installed GitHub CLI ***"
 # Install PostgreSQL
 apt install postgresql postgresql-contrib -y
 echo "*** Installed PostgreSQL ***"
+
+# Clean up
+rm ./setup.sh
