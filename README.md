@@ -16,7 +16,8 @@ wget https://raw.githubusercontent.com/borisevstratov/vscale-docker-env-setup/ma
 Authenticate GitHub CLI with
 
 ```bash
-echo -n "$GITHUB_AUTH_TOKEN" | gh auth login --with-token
+export GH_TOKEN="$GITHUB_PAT"
+gh auth setup-git
 ```
 
 Create PostgreSQL user & database with
