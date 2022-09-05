@@ -7,7 +7,7 @@ sudo groupadd docker
 useradd -m developer
 echo "developer:${USER_PASSWD}" | chpasswd
 usermod -aG sudo developer
-usermod -aG docker 
+usermod -aG docker developer
 echo "----------------------------------------------------------------"
 echo "\nCreated sudo-user \nLogin: developer \nPassword: ${USER_PASSWD}"
 echo "----------------------------------------------------------------"
