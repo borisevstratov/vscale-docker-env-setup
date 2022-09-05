@@ -3,9 +3,11 @@ set -e
 
 # Create a sudo-enabled user
 USER_PASSWD=$(openssl rand -base64 12)
+sudo groupadd docker
 useradd -m developer
 echo "developer:${USER_PASSWD}" | chpasswd
 usermod -aG sudo developer
+usermod -aG docker 
 echo "----------------------------------------------------------------"
 echo "\nCreated sudo-user \nLogin: developer \nPassword: ${USER_PASSWD}"
 echo "----------------------------------------------------------------"
