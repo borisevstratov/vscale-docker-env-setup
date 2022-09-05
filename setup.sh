@@ -30,11 +30,10 @@ echo "\nAllocated swap file"
 echo "----------------------------------------------------------------"
 
 # Install GitHub CLI
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
-sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null 
-sudo apt update 
-sudo apt install gh -y
+curl -Lso /var/tmp/gh.deb "https://github.com/cli/cli/releases/download/v2.14.6/gh_2.14.6_linux_amd64.deb"
+sudo dpkg -i /var/tmp/gh.deb
+rm /var/tmp/gh.deb
+gh --version
 echo "----------------------------------------------------------------"
 echo "\nInstalled GitHub CLI"
 echo "----------------------------------------------------------------"
