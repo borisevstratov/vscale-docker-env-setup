@@ -21,9 +21,13 @@ echo "\nAllocated swap file"
 echo "----------------------------------------------------------------"
 
 # Install GitHub CLI
-apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
-apt-add-repository https://cli.github.com/packages
-apt install gh -y
+sudo apt update -y
+sudo apt install git -y
+git --version
+curl -Lso /var/tmp/gh.deb "https://github.com/cli/cli/releases/download/v2.14.6/gh_2.14.6_linux_amd64.deb"
+sudo dpkg -i /var/tmp/gh.deb
+rm /var/tmp/gh.deb
+gh --version
 echo "----------------------------------------------------------------"
 echo "\nInstalled GitHub CLI"
 echo "----------------------------------------------------------------"
