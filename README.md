@@ -11,6 +11,12 @@ Run script with `wget`
 wget https://raw.githubusercontent.com/borisevstratov/vscale-docker-env-setup/main/setup.sh && chmod +x setup.sh && ./setup.sh
 ```
 
+or without creating a sudo-user and PostgreSQL db:
+
+```bash
+wget https://raw.githubusercontent.com/borisevstratov/vscale-docker-env-setup/main/pico.sh && chmod +x pico.sh && ./pico.sh
+```
+
 ## Post-installation
 
 Authenticate GitHub CLI with
