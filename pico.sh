@@ -7,6 +7,9 @@ echo "----------------------------------------------------------------"
 echo "\nUpdated Linux dependencies"
 echo "----------------------------------------------------------------"
 
+# Install git
+apt instal git -y
+
 # Setup Swap
 fallocate -l 4G /swapfile
 sudo chmod 600 /swapfile
