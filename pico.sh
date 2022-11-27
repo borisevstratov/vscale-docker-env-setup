@@ -1,14 +1,8 @@
 #! /bin/sh
 set -e
 
-# Update dependencies
-apt update -y
-echo "----------------------------------------------------------------"
-echo "\nUpdated Linux dependencies"
-echo "----------------------------------------------------------------"
-
 # Install git
-apt instal git -y
+apt install git -y
 
 # Setup Swap
 fallocate -l 4G /swapfile
