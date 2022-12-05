@@ -26,6 +26,13 @@ export GH_TOKEN="$GITHUB_PAT"
 gh auth setup-git
 ```
 
+Authenticating to the Container registry
+
+```bash
+export CR_PAT="$GITHUB_PAT"
+echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+```
+
 Create PostgreSQL user & database with
 
 ```bash
