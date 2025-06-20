@@ -4,6 +4,11 @@ set -e
 # Install git
 apt install git -y
 
+# Update docker
+sudo apt-get update
+sudo apt-get install docker-compose-plugin
+docker compose version
+
 # Setup Swap
 fallocate -l 4G /swapfile
 sudo chmod 600 /swapfile
