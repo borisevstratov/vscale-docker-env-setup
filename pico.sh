@@ -21,7 +21,7 @@ echo "----------------------------------------------------------------"
 sudo apt update -y
 sudo apt install git -y
 git --version
-curl -Lso /var/tmp/gh.deb "https://github.com/cli/cli/releases/download/v2.14.6/gh_2.14.6_linux_amd64.deb"
+curl -Lso /var/tmp/gh.deb "https://github.com/cli/cli/releases/download/v2.74.2/gh_2.74.2_linux_amd64.deb"
 sudo dpkg -i /var/tmp/gh.deb
 rm /var/tmp/gh.deb
 gh --version
